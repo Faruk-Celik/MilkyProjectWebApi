@@ -1,0 +1,55 @@
+﻿@model List<MilkyProject.WebUI.Dtos.WhyUsDto.ResultWhyUsDto>
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <p class="section-title bg-white text-start text-primary pe-3">Neden Biz?</p>
+                @foreach (var item in Model)
+                {
+
+                    <h1 class="mb-4">@item.Title</h1>
+                    <p class="mb-4">@item.Description</p>
+                }
+
+                <p><i class="fa fa-check text-primary me-3"></i>Organik tarımı tercih ediyoruz</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Yurt içi ve yurt dışı organik tarım sertifakası</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Müşteri  memuniyeti </p>
+                <a class="btn btn-secondary rounded-pill py-3 px-5 mt-3" href="">Daha fazlasını keşfet  </a>
+            </div>
+            <div class="col-lg-6">
+                <div class="rounded overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="text-center bg-primary py-5 px-4">
+                                <img class="img-fluid mb-4" src="~/dairy-website-template/img/experience.png" alt="">
+                                <h1 class="display-6 text-white" data-toggle="counter-up">500</h1>
+                                <span class="fs-5 fw-semi-bold text-secondary">Çalışan Sayımız</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="text-center bg-secondary py-5 px-4">
+                                <img class="img-fluid mb-4" src="~/dairy-website-template/img/award.png" alt="">
+                                <h1 class="display-6" data-toggle="counter-up">75</h1>
+                                <span class="fs-5 fw-semi-bold text-primary">Yurt dışı ihraç yapılan ülke</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="text-center bg-secondary py-5 px-4">
+                                <img class="img-fluid mb-4" src="~/dairy-website-template/img/animal.png" alt="">
+                                <h1 class="display-6" data-toggle="counter-up">2619</h1>
+                                <span class="fs-5 fw-semi-bold text-primary">Toplam hayvanlarımız</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                            <div class="text-center bg-primary py-5 px-4">
+                                <img class="img-fluid mb-4" src="~/dairy-website-template/img/client.png" alt="">
+                                <h1 class="display-6 text-white" data-toggle="counter-up">51940</h1>
+                                <span class="fs-5 fw-semi-bold text-secondary">Toplam Şipariş Sayısı</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

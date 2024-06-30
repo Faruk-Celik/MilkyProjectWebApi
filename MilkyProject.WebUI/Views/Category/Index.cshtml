@@ -1,0 +1,30 @@
+﻿@model List<MilkyProject.WebUI.Dtos.CategoryDto.ResultCategoryDto>
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Category Name</th>
+            <th>Update Category</th>
+            <th>Delete Category</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.categoryId</td>
+                <td>@item.categoryName</td>
+                <td> <a href="/Category/UpdateCategory/@item.categoryId" class="btn btn-warning">Update</a></td>
+                <td> <a href="/Category/DeleteCategory/@item.categoryId" class="btn btn-danger">Delete</a></td>
+
+
+            </tr>
+        }
+    </table>
+    <a href="/Category/CreateCategory/" class="btn btn-success">Add New Category</a>
+</div>
