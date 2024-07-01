@@ -25,7 +25,7 @@ Used technologies</p>
 <li> Entity Framework LINQ</li>
 <li> Repository Design Pattern</li>
 <li> Dependency injection</li>
-<li> Web API<li>
+<li> Web API</li>
 <li> Swagger</li>
 </ul>
 
