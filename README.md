@@ -17,18 +17,17 @@ Used technologies</p>
   <li> Css</li>
   <li> Javascript</li>
   <li> Bootstrap</li>
-  
- 
 </ul>
 <h5>Technicial Specifications</h5>
+<ul>
 <li> MSSQL</li>
 <li> Asp.Net Core 6.0</li>
 <li> Entity Framework LINQ</li>
 <li> Repository Design Pattern</li>
-<h5> Dependency injection</h5>
+<li> Dependency injection</li>
 <li> Web API<li>
 <li> Swagger</li>
-
+</ul>
 
 <h2> Web Api Part</h2>
 
