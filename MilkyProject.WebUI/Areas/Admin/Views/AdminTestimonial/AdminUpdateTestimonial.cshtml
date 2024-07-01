@@ -1,0 +1,30 @@
+﻿@model MilkyProject.WebUI.Dtos.TestimonialDto.UpdateTestimonialDto
+@{
+    ViewData["Title"] = "AdminUpdateTestimonial";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h3 style="color :limegreen">Edit Testimonial</h3>
+
+<form method="post">
+    <div class="container">
+        
+        <br /><br />
+        @Html.HiddenFor(x => x.TestimonialId)
+        <label>#</label>
+        <input type="text" asp-for="TestimonialId" readonly class="form-control" />
+        <br />
+        <label>Name Surname</label>
+        <input type="text" asp-for="NameSurname" class="form-control" />
+        <br />
+        <label>Image Url</label>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+        <br />
+        <label>Job Name</label>
+        <input type="text" asp-for="JobName" class="form-control" />
+        <br />
+        <label>Description</label>
+        <textarea rows="4" asp-for="Description" class="form-control"> </textarea>
+        <br />
+        <button type="submit" class="btn btn-warning">Save Changes</button>
+    </div>
+</form>

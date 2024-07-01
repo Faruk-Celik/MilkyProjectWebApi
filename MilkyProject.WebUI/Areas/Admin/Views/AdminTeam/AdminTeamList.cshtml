@@ -1,0 +1,38 @@
+﻿@model List<MilkyProject.WebUI.Dtos.TeamDto.ResultTeamDto>
+@{
+    ViewData["Title"] = "AdminTeamList";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h3 style="color :limegreen">Team List</h3>
+
+<table class="table table-head-bg-success">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Profile Image</th>
+            <th scope="col">Name Surname</th>
+            <th scope="col">Job</th>
+            <th scope="col">Facebook Adress</th>
+            <th scope="col">Twitter Adress</th>
+            <th scope="col">Instagram Adress</th>
+            <th scope="col">Edit Team</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TeamId</td>
+                <td> <img class="img-fluid" style="width:165px;height:200px" src="@item.ProfileImageUrl" alt=""></td>
+                <td>@item.NameSurname</td>
+                <td>@item.JobName</td>
+                <td>@item.SocialMediaUrl1</td>
+                <td>@item.SocialMediaUrl2</td>
+                <td>@item.SocialMediaUrl3</td>
+                <td> <a href="/Admin/AdminTeam/AdminUpdateTeam/@item.TeamId" class="btn btn-secondary btn-border btn-round"> Edit </a></td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>

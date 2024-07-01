@@ -9,6 +9,13 @@
         public decimal newPrice { get; set; }
         public string productImageUrl { get; set; }
         public bool status { get; set; }
+        public Category category { get; set; }
+        public class Category
+        {
+
+            public string categoryName { get; set; }
+
+        }
 
     }
 }

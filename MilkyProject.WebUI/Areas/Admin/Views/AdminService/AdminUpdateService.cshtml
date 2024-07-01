@@ -1,0 +1,34 @@
+﻿@model MilkyProject.WebUI.Dtos.ServiceDto.UpdateServiceDto
+@{
+    ViewData["Title"] = "AdminUpdateService";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h3 style="color :limegreen">Edit Services</h3>
+
+<form method="post">
+    <div class="container">
+        
+        <br /><br />
+        @Html.HiddenFor(x => x.ServiceId)
+        <label>#</label>
+        <input type="text" asp-for="ServiceId" readonly class="form-control" />
+        <br />
+        <label>Service Header</label>
+        <input type="text" asp-for="Header" class="form-control" />
+        <br />
+        <label>Service Title</label>
+        <input type="text" asp-for="Title" class="form-control" />
+        <br />
+        <label> Service Big Image Url</label>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+        <br />
+        <label> Service Small Image Url</label>
+        <input type="text" asp-for="SmallImageUrl" class="form-control" />
+        <br />
+        <label>About Description</label>
+        <textarea rows="4" asp-for="Description" class="form-control"> </textarea>
+        <br />
+        <button type="submit" class="btn btn-warning">Save Changes</button>
+    </div>
+</form>
+

@@ -1,0 +1,31 @@
+﻿@model MilkyProject.WebUI.Dtos.AdressDto.UpdateAdressDto
+@{
+    ViewData["Title"] = "UpdateAdressList";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h3 style="color :limegreen"> Edit Adress</h3>
+<form method="post">
+    <div class="container">
+        
+        <br /><br />
+        @Html.HiddenFor(x => x.AdressId)
+        <label>#</label>
+        <input type="text" asp-for="AdressId" readonly class="form-control" />
+        <br />
+        <label>Mail</label>
+        <input type="text" asp-for="Mail" class="form-control" />
+        <br />
+        <label>Phone</label>
+        <input type="text" asp-for="Phone" class="form-control"  />
+        <label>Business Hours Week</label>
+        <input type="text" asp-for="BusinessHoursWeek" class="form-control"> </input>
+        <br />
+        <label>Business Hours Weekend</label>
+        <input type="text" asp-for="BusinessHoursWeekend" class="form-control"> </input>
+        <br />
+        <label>Adress</label>
+        <textarea rows="4" asp-for="Street" class="form-control"> </textarea>
+        <br />
+        <button type="submit" class="btn btn-warning">Save Changes</button>
+    </div>
+</form>

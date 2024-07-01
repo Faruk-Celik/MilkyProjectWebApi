@@ -1,0 +1,37 @@
+﻿@model MilkyProject.WebUI.Dtos.TeamDto.UpdateTeamDto
+@{
+    ViewData["Title"] = "AdminUpdateTeam";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h3 style="color :limegreen">Edit Team</h3>
+
+<form method="post">
+    <div class="container">
+
+        <br /><br />
+        @Html.HiddenFor(x => x.TeamId)
+        <label>#</label>
+        <input type="text" asp-for="TeamId" readonly class="form-control" />
+        <br />
+        <label>Name Surname</label>
+        <input type="text" asp-for="NameSurname" class="form-control" />
+        <br />
+        <label> Job </label>
+        <input type ="text" asp-for="JobName" class="form-control">
+        <br />
+        <label>Profile Image</label>
+        <input type="text" asp-for="ProfileImageUrl" class="form-control" placeholder="Profile Image Url">
+        <br />
+        <label>Facebook Adress</label>
+        <input type="text"  asp-for="SocialMediaUrl1" class="form-control" placeholder="Facebook Adress"> 
+        <br />
+        <label>Twitter Adress</label>
+        <input type="text" asp-for="SocialMediaUrl2" class="form-control" placeholder="Twitter Adress">
+        <br />
+        <label>Instagram Adress</label>
+        <input type="text" asp-for="SocialMediaUrl3" class="form-control" placeholder="Instagram Adress">
+        <br />
+        <button type="submit" class="btn btn-warning">Save Changes</button>
+    </div>
+</form>
+

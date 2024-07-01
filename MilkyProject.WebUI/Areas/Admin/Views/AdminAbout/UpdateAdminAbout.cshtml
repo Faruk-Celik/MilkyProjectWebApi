@@ -1,0 +1,23 @@
+﻿@model MilkyProject.WebUI.Dtos.AboutDto.UpdateAboutDto
+@{
+    ViewData ["Title"] = "UpdateAdminAbout";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h3 style="color :limegreen">Edit About</h3>
+<form method="post">
+    <div class="container">
+       
+        <br /><br />
+        @Html.HiddenFor(x => x.AboutId)
+        <label>#</label>
+        <input type="text" asp-for="AboutId" readonly class="form-control" />
+        <br />
+        <label>About Title</label>
+        <input type="text" asp-for="Title" class="form-control" />
+        <br />
+        <label>About Description</label>
+        <textarea rows="4" asp-for="Description" class="form-control" > </textarea>  
+        <br />
+        <button type="submit" class="btn btn-warning">Save Changes</button>
+    </div>
+</form>

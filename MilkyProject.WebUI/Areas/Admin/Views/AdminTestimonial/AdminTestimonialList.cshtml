@@ -1,0 +1,37 @@
+﻿@model List<MilkyProject.WebUI.Dtos.TestimonialDto.ResultTestimonialDto>
+@{
+    ViewData["Title"] = "AdminTestimonialList";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h3 style="color :limegreen">Testimonial List</h3>
+
+<table class="table table-head-bg-success">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Image Url</th>
+            <th scope="col">Name Surname</th>
+            <th scope="col">Job Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Edit Testimonial</th>
+            <th scope="col">Delete Testimonial</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TestimonialId</td>
+                <td><img class="img-fluid" style="width:165px;height:200px " src="@item.ImageUrl" alt=""></td>
+                <td>@item.NameSurname</td>
+                <td>@item.JobName</td>
+                <td>@item.Description.Substring(0, 30)...</td>
+                <td> <a href="/Admin/AdminTestimonial/AdminUpdateTestimonial/@item.TestimonialId" class="btn btn-secondary btn-border btn-round"> Edit </a></td>
+                <td> <a href="/Admin/AdminTestimonial/DeleteAdminTestimonial/@item.TestimonialId" class="btn btn-danger btn-border btn-round"> Delete </a></td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
+    <a href="/Admin/AdminTestimonial/CreateTestimonail/" class="btn btn-secondary btn-border btn-round"> Create Testimonial </a>
+

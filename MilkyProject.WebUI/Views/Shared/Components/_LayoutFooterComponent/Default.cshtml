@@ -15,21 +15,20 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4">Kısayollar</h5>
-                <a class="btn btn-link" href="">Hakkımızda</a>
-                <a class="btn btn-link" href="">Bize Ulaşın</a>
-                <a class="btn btn-link" href="">Hizmetlerimiz</a>
-                <a class="btn btn-link" href="">Şartlar ve Koşullar</a>
-                <a class="btn btn-link" href="">Destek</a>
+                <h5 class="text-white mb-4">Shortcuts</h5>
+                <a class="btn btn-link" href="">About Us</a>
+                <a class="btn btn-link" href="">Contact Us</a>
+                <a class="btn btn-link" href="">Our Services</a>                
+                <a class="btn btn-link" href="">Support</a>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4">Çalışma Saatleri</h5>
-                <p class="mb-1">Pazartesi - Cuma</p>
+                <h5 class="text-white mb-4">Business Hours</h5>
+                <p class="mb-1">Monday - Friday</p>
                 <h6 class="text-light">@Model.BusinessHoursWeek</h6>
-                <p class="mb-1">Cumartesi</p>
+                <p class="mb-1">Saturday</p>
                 <h6 class="text-light">@Model.BusinessHoursWeekend</h6>
-                <p class="mb-1">Pazar</p>
-                <h6 class="text-light">Kapalı</h6>
+                <p class="mb-1">Sunday</p>
+                <h6 class="text-light">Closed</h6>
             </div>
             @await Component.InvokeAsync("_LayoutNewsLetterComponent")
         </div>

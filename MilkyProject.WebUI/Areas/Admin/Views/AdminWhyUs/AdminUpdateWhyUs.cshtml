@@ -1,0 +1,24 @@
+﻿@model MilkyProject.WebUI.Dtos.WhyUsDto.UpdateWhyUsDto
+@{
+    ViewData["Title"] = "AdminUpdateWhyUs";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h3 style="color :limegreen">Why Us List</h3>
+<form method="post">
+    <div class="container">
+       
+        <br /><br />
+        @Html.HiddenFor(x => x.WhyusId)
+        <label>#</label>
+        <input type="text" asp-for="WhyusId" readonly class="form-control" />
+        <br />
+        <label>Title</label>
+        <input type="text" asp-for="Title" class="form-control" />
+        <br />
+        <label>Description</label>
+        <textarea rows="4" asp-for="Description" class="form-control"> </textarea>
+        <br />
+        <button type="submit" class="btn btn-warning">Save Changes</button>
+    </div>
+</form>
+

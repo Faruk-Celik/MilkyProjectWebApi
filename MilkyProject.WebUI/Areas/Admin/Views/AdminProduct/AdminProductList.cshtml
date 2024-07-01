@@ -1,0 +1,45 @@
+﻿ @model List<MilkyProject.WebUI.Dtos.ProductDto.ResultProductWithCategoryDto> 
+@{
+    ViewData["Title"] = "AdminProductList";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 style="color :limegreen">Product List</h3>
+
+<table class="table table-head-bg-success">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product Image</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Old Price</th>
+            <th scope="col">New Price</th>
+            <th scope="col">Status</th>          
+            <th scope="col">Edit Product</th>
+            <th scope="col">Delete Product</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.productId</td>
+                <td><img class="img-fluid" style="width:165px;height:200px " src="@item.productImageUrl" alt="   " /></td>
+                <td>@item.productName</td>
+                <td>@item.category.categoryName</td>
+                <td>@item.oldPrice</td>
+                <td>@item.newPrice</td>
+                <td>@item.status</td>
+                <td> <a href="/Admin/AdminProduct/UpdateAdminProduct/@item.productId" class="btn btn-secondary btn-border btn-round"> Edit </a></td>
+                <td> <a href="/Admin/AdminProduct/DeleteAdminProduct/@item.productId" class="btn btn-danger btn-border btn-round"> Delete </a></td> 
+                
+            </tr>
+       
+        }
+    
+
+
+
+    </tbody>
+</table>

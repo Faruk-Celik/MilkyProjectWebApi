@@ -1,0 +1,35 @@
+﻿@model List<MilkyProject.WebUI.Dtos.ServiceDto.ResultServiceDto>
+@{
+    ViewData["Title"] = "AdminServiceList";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h3 style="color :limegreen">Service List</h3>
+<table class="table table-head-bg-success">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Service Header</th>
+            <th scope="col">Service Title</th>
+            <th scope="col">Big Image URl</th>
+            <th scope="col">Small Image URl</th>
+            <th scope="col">Service Description</th>
+            <th scope="col">Edit Service</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ServiceId</td>
+                <td>@item.Header</td>
+                <td>@item.Title</td>
+                <td>@item.ImageUrl</td>
+                <td>@item.SmallImageUrl</td>
+                <td>@item.Description.Substring(0, 30)</td>
+                <td> <a href="/Admin/AdminService/AdminUpdateService/@item.ServiceId" class="btn btn-secondary btn-border btn-round"> Edit </a></td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>

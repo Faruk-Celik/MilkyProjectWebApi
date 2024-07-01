@@ -3,12 +3,15 @@
     ViewData ["Title"] = "AdminAboutList";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-<table class="table">
+<h3 style="color :limegreen"> About List</h3>
+
+<table class="table table-head-bg-success">
     <thead>
         <tr>
-            <th>#</th>
-            <th>Başlık</th>
-            <th>Açıklama</th>
+            <th scope="col">#</th>
+            <th scope="col">About Title</th>
+            <th scope="col">About Description</th>
+            <th scope="col">Edit About</th>
         </tr>
     </thead>
     <tbody>
@@ -17,9 +20,11 @@
             <tr>
                 <td>@item.aboutId</td>
                 <td>@item.title</td>
-                <td>@item.description.</td>
-              
+                <td>@item.description.Substring(0,30)</td>
+                <td> <a href="/Admin/AdminAbout/UpdateAdminAbout/@item.aboutId" class="btn btn-secondary btn-border btn-round"> Edit </a></td>
             </tr>
         }
+        
+
     </tbody>
 </table>

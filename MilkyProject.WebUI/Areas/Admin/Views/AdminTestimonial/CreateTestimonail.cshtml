@@ -1,0 +1,30 @@
+﻿@model MilkyProject.WebUI.Dtos.TestimonialDto.CreateTestimonialDto
+@{
+    ViewData["Title"] = "CreateTestimonail";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h3 style="color :limegreen">Create Testimonial</h3>
+
+<form method="post">
+    <div class="container">
+        
+        <br /><br />
+        <br />
+        <label>Testimonial Name</label>
+        <input type="text" asp-for="NameSurname" class="form-control" />
+        <br />
+        <label>Image Url</label>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+
+        <label>Description</label>
+        <input type="text" asp-for="Description" class="form-control">
+
+        <label>Job Name</label>
+        <input type="text" asp-for="JobName" class="form-control">       
+        <br />
+        <button type="submit" class="btn btn-warning">Save Changes</button>
+    </div>
+</form>
+
+
+
